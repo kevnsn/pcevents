@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Staticdemo::Application.load_tasks
+Pcevents::Application.load_tasks
