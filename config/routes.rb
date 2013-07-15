@@ -1,6 +1,8 @@
 Pcevents::Application.routes.draw do
+  resources :pcevents
   resources :users
   root to: 'pages#home'
+  match '/pcevents/zip/:zip',  to: 'pcevents#zipindex',            via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/help', to: 'pages#help',            via: 'get'
   match '/about', to: 'pages#about',            via: 'get'

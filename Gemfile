@@ -29,6 +29,8 @@ gem 'jquery-rails'
 gem 'bootstrap-sass' #for bootstrap
 # To use ActiveModel has_secure_password
  gem 'bcrypt-ruby', '~> 3.0.1'
+#for datetime validation in event generation
+gem 'date_validator'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
