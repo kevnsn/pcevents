@@ -6002,3 +6002,326 @@ Processing by PceventsController#zipindex as JSON
   Parameters: {"zip"=>"22092"}
   [1m[36mPcevent Load (0.3ms)[0m  [1mSELECT "pcevents".* FROM "pcevents" WHERE "pcevents"."zipcode" = 22092[0m
 Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130714042303)
+Migrating to AddIndexToUsersEmail (20130714150421)
+Migrating to AddPasswordDigestToUsers (20130714152340)
+Migrating to CreatePcevents (20130715181727)
+Migrating to RemoveStartDate (20130715185546)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130714042303)
+Migrating to AddIndexToUsersEmail (20130714150421)
+Migrating to AddPasswordDigestToUsers (20130714152340)
+Migrating to CreatePcevents (20130715181727)
+Migrating to RemoveStartDate (20130715185546)
+Migrating to AddGeokitFields (20130715200820)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "pcevents" ADD "city" varchar(255)
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "pcevents" ADD "lng" decimal(15,10)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "pcevents" ADD "lat" decimal(15,10)
+  [1m[36m (0.3ms)[0m  [1mCREATE INDEX "index_pcevents_on_lat" ON "pcevents" ("lat")[0m
+  [1m[35m (0.5ms)[0m  CREATE INDEX "index_pcevents_on_lng" ON "pcevents" ("lng")
+  [1m[36m (0.4ms)[0m  [1mCREATE INDEX "index_pcevents_on_lat_and_lng" ON "pcevents" ("lat", "lng")[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130715200820')
+  [1m[36m (401.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130714042303)
+Migrating to AddIndexToUsersEmail (20130714150421)
+Migrating to AddPasswordDigestToUsers (20130714152340)
+Migrating to CreatePcevents (20130715181727)
+Migrating to RemoveStartDate (20130715185546)
+Migrating to AddGeokitFields (20130715200820)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130714042303)
+Migrating to AddIndexToUsersEmail (20130714150421)
+Migrating to AddPasswordDigestToUsers (20130714152340)
+Migrating to CreatePcevents (20130715181727)
+Migrating to RemoveStartDate (20130715185546)
+Migrating to AddGeokitFields (20130715200820)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130714042303)
+Migrating to AddIndexToUsersEmail (20130714150421)
+Migrating to AddPasswordDigestToUsers (20130714152340)
+Migrating to CreatePcevents (20130715181727)
+Migrating to RemoveStartDate (20130715185546)
+Migrating to AddGeokitFields (20130715200820)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-15 16:26:44 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (173.7ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+Completed 200 OK in 5443ms (Views: 5442.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-15 16:26:51 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 73ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /application.css - 304 Not Modified (104ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /custom.css - 304 Not Modified (75ms)
+
+
+Started GET "/assets/pcevents.css?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /pcevents.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /pages.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /pages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/pcevents.js?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /pcevents.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /users.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-15 16:26:52 -0400
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-07-15 16:26:53 -0400
+Served asset /rails.png - 304 Not Modified (229ms)
+
+
+Started GET "/pcevents" for 127.0.0.1 at 2013-07-15 16:26:57 -0400
+
+ActionController::RoutingError (undefined method `before_validation_on_create' for #<Class:0x00000004d20fd8>):
+  app/models/pcevent.rb:2:in `<class:Pcevent>'
+  app/models/pcevent.rb:1:in `<top (required)>'
+  app/controllers/pcevents_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/kevin/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/pcevents/new" for 127.0.0.1 at 2013-07-15 16:27:10 -0400
+Processing by PceventsController#new as HTML
+  Rendered pcevents/_form.html.erb (14.0ms)
+  Rendered pcevents/new.html.erb within layouts/application (38.4ms)
+Completed 500 Internal Server Error in 41ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <%= form_for(@pcevent) do |f| %>
+    2:   <% if @pcevent.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@pcevent.errors.count, "error") %> prohibited this pcevent from being saved:</h2>
+  app/views/pcevents/_form.html.erb:1:in `_app_views_pcevents__form_html_erb___4371283718283550720_32189800'
+  app/views/pcevents/new.html.erb:3:in `_app_views_pcevents_new_html_erb__2681094262631227447_32110420'
+
+
+  Rendered /home/kevin/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /home/kevin/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/kevin/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.0ms)
+
+
+Started GET "/pcevents/zip" for 127.0.0.1 at 2013-07-15 16:27:50 -0400
+Processing by PceventsController#show as HTML
+  Parameters: {"id"=>"zip"}
+  Rendered pcevents/show.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `eventtime' for nil:NilClass):
+    2: 
+    3: <p>
+    4:   <b>Event time:</b>
+    5:   <%= @pcevent.eventtime %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/pcevents/show.html.erb:5:in `_app_views_pcevents_show_html_erb__2399111415088785057_40321520'
+
+
+  Rendered /home/kevin/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /home/kevin/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /home/kevin/.rvm/gems/ruby-2.0.0-p195/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.1ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130714042303)
+Migrating to AddIndexToUsersEmail (20130714150421)
+Migrating to AddPasswordDigestToUsers (20130714152340)
+Migrating to CreatePcevents (20130715181727)
+Migrating to RemoveStartDate (20130715185546)
+Migrating to AddGeokitFields (20130715200820)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-16 10:59:44 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (19.5ms)
+  Rendered layouts/_shim.html.erb (0.8ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+Completed 200 OK in 1938ms (Views: 1937.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /application.css - 200 OK (109ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /pages.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /custom.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /users.js - 200 OK (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /jquery.js - 200 OK (7ms)
+
+
+Started GET "/assets/pcevents.css?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /pcevents.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /users.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /application.js - 200 OK (86ms)
+
+
+Started GET "/assets/pcevents.js?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /pcevents.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /pages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-07-16 10:59:47 -0400
+Served asset /rails.png - 304 Not Modified (21ms)
+
+
+Started GET "/pcevents" for 127.0.0.1 at 2013-07-16 10:59:50 -0400
+Processing by PceventsController#index as HTML
+  [1m[36mPcevent Load (0.3ms)[0m  [1mSELECT "pcevents".* FROM "pcevents" [0m
+  Rendered pcevents/index.html.erb within layouts/application (46.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 211ms (Views: 176.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-16 10:59:51 -0400
+Served asset /custom.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-16 10:59:51 -0400
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pcevents.css?body=1" for 127.0.0.1 at 2013-07-16 10:59:51 -0400
+Served asset /pcevents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pcevents.js?body=1" for 127.0.0.1 at 2013-07-16 10:59:51 -0400
+Served asset /pcevents.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-16 10:59:51 -0400
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/pcevents/new" for 127.0.0.1 at 2013-07-16 11:00:06 -0400
+Processing by PceventsController#new as HTML
+  Rendered pcevents/_form.html.erb (92.1ms)
+  Rendered pcevents/new.html.erb within layouts/application (108.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 250ms (Views: 249.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-07-16 11:00:06 -0400
+Served asset /custom.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/pcevents.css?body=1" for 127.0.0.1 at 2013-07-16 11:00:06 -0400
+Served asset /pcevents.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-07-16 11:00:06 -0400
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-07-16 11:00:06 -0400
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pcevents.js?body=1" for 127.0.0.1 at 2013-07-16 11:00:06 -0400
+Served asset /pcevents.js - 304 Not Modified (0ms)

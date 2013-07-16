@@ -31,6 +31,9 @@ gem 'bootstrap-sass' #for bootstrap
  gem 'bcrypt-ruby', '~> 3.0.1'
 #for datetime validation in event generation
 gem 'date_validator'
+gem 'geokit'
+gem 'geokit-rails'
+#for event geographic info
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

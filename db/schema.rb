@@ -11,17 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130715185546) do
+ActiveRecord::Schema.define(:version => 20130715200820) do
 
   create_table "pcevents", :force => true do |t|
     t.string   "location"
     t.string   "address"
     t.integer  "zipcode"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
     t.datetime "eventtime"
+    t.string   "city"
+    t.decimal  "lng",         :precision => 15, :scale => 10
+    t.decimal  "lat",         :precision => 15, :scale => 10
   end
+
+  add_index "pcevents", ["lat", "lng"], :name => "index_pcevents_on_lat_and_lng"
+  add_index "pcevents", ["lat"], :name => "index_pcevents_on_lat"
+  add_index "pcevents", ["lng"], :name => "index_pcevents_on_lng"
 
   create_table "users", :force => true do |t|
     t.string   "name"
